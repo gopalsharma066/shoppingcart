@@ -54,6 +54,12 @@ spec:
                 configMapKeyRef:
                   name: commons-configmap
                   key: s3_url
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: nginx-secret
+                  key: db_password
+               
 
 
         
