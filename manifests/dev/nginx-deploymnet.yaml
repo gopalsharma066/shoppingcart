@@ -10,7 +10,7 @@ metadata:
 # 1. DEPLOYMENT CONFIGURATION
 # ==========================================
 spec:
-  replicas: 4
+  replicas: 20
 
   selector:
     matchLabels:
