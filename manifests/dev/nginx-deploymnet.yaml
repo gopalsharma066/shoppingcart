@@ -35,10 +35,10 @@ spec:
             - name: http
               containerPort: 8080
           env:
-            - name: DATABASE_URL
-              value: "https://rds.ap-south-1a.amazon.com123"
-            - name: DATABASE_USERNAME
-              value: admin123
+            - name: DATABASE_URL123
+              value: "https://rds.ap-south-1a.amazon.com"
+            - name: DATABASE_USERNAME123
+              value: admin
 
 
         
