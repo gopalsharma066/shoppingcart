@@ -39,6 +39,21 @@ spec:
               value: "https://rds.ap-south-1a.amazon.com"
             - name: DATABASE_USERNAME123
               value: admin
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: nginx-configmap
+                  key: database_url
+            - name: DATABASE_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: nginx-configmap
+                  key: database_username
+            - name: S3_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: commons-configmap
+                  key: s3_url
 
 
         
