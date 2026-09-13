@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx-server
+  labels:
+    app: nginx-server
+
+# ==========================================
+# 1. DEPLOYMENT CONFIGURATION
+# ==========================================
+spec:
+  replicas: 4
+
+  selector:
+    matchLabels:
+      app: nginx-server
+
+
+
+  # ==========================================
+  # 2. POD TEMPLATE CONFIGURATION
+  # ==========================================
+  template:
+    metadata:
+      labels:
+        app: nginx-server
+
+    spec:
+      containers:
+        - name: nginx-server
+          image: nginx:alpine 
+
+          ports:
+            - name: http
+              containerPort: 8080
+
+
+        
